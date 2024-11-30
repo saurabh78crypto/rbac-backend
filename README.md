@@ -25,23 +25,23 @@ This project is a backend implementation of a **Role-Based Access Control (RBAC)
 
 ## Getting Started
 
-1. Prerequisites
+1. **Prerequisites**
     - Node.js (v16+ recommended)
     - MongoDB instance (local or cloud-based, e.g., MongoDB Atlas)
     - Postman for API testing (optional)
 
-2. Clone the Repository
+2. **Clone the Repository**
 ```bash
-git clone <repository-url>  
+git clone https://github.com/saurabh78crypto/rbac-backend.git
 cd rbac-backend  
 ```
 
-3. Install Dependencies
+3. **Install Dependencies**
 ```bash
 npm install  
 ```
 
-4. Configure Environment Variables
+4. **Configure Environment Variables**
 - Create a `.env` file in the root directory and add the following:
 ```js
 PORT=5000  
@@ -49,7 +49,7 @@ MONGO_URI=<your-mongodb-uri>
 JWT_SECRET=<your-secret-key> 
 ```
 
-5. Start the Server
+5. **Start the Server**
 ```bash
 npm start  
 ```
@@ -105,18 +105,18 @@ rbac-backend/
 
 ## Testing the API
 
-1. Register a User:
+1. **Register a User:**
     - Send a POST request to /api/auth/register with username, password, and role in the body.
 
-2. Log In:
+2. **Log In:**
     - Send a POST request to /api/auth/login with username and password. Copy the JWT token from the response.
 
-3. Access Protected Routes:
+3. **Access Protected Routes:**
     - Send GET requests to /api/protected/admin, /api/protected/moderator, or /api/protected/user.
     - Include the JWT token in the Authorization header as:
       ```plaintext
         Authorization: Bearer <token>  
       ```
 
-4. Test Rate Limiting:
-    - Send over 100 requests to any endpoint within 15 minutes to test rate limiting.
+4. **Test Rate Limiting:**
+    - Send over 10 requests to any endpoint within 15 minutes to test rate limiting.
